@@ -14,21 +14,23 @@
 024     @INTERRUPT_AREA
 025     @INTERRUPT_AREA
 026     @INTERRUPT_AREA
-027     a
-028     b
-029     c
-02A     d
-02B     interrupt.i
-02C     interrupt.m
-02D     interrupt.i
-02E     interrupt.m
+027-02A Q
+02B     a
+02C     b
+02D     c
+02E     d
 02F     interrupt.i
 030     interrupt.m
-031     @delay_ms1.P1
-031     interrupt.@SCRATCH1
-032     interrupt.@SCRATCH2
-033     interrupt.@SCRATCH3
-034     interrupt.@SCRATCH4
+031     interrupt.i
+032     interrupt.m
+033     interrupt.i
+034     interrupt.m
+035     interrupt.i
+036     @delay_ms1.P1
+036     interrupt.@SCRATCH1
+037     interrupt.@SCRATCH2
+038     interrupt.@SCRATCH3
+039     interrupt.@SCRATCH4
 077     @SCRATCH
 078     @SCRATCH
 078     _RETURN_
@@ -38,8 +40,8 @@
 09C.6   C1OUT
 09C.7   C2OUT
 0FF     @INTERRUPT_AREA
-10D-10E @WRITE_PROGRAM_MEMORY8.P1
-10D-10E @READ_PROGRAM_MEMORY8.P2
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
 17F     @INTERRUPT_AREA
 1FF     @INTERRUPT_AREA
 27F     @INTERRUPT_AREA
@@ -74,19 +76,19 @@ FFF     @INTERRUPT_AREA
 ROM Allocation:
 00002F  @delay_ms1
 000043  interrupt
-000126  MAIN
-000126  @cinit1
-000134  @cinit2
+000137  MAIN
+000137  @cinit1
+000145  @cinit2
 
 Project Directory:
-    C:\Users\Dung Phan\Documents\ITR\
+    C:\Users\Dung Phan\Documents\ITR\CCSC\
 
 Project Files:
-    main.c                                                  [11-Oct-17 22:30  CRC=B0E41582]
+    main.c                                                  [11-Oct-17 23:59  CRC=0C5AE780]
     main.h                                                  [11-Oct-17 20:30  CRC=CF12E969]
-    ..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h  [12-Nov-13 14:35  CRC=81334808]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [12-Nov-13 14:35  CRC=81334808]
 
-Source signature=825D8EFB
+Source signature=DDD460F9
 
 Units:
     main (main)

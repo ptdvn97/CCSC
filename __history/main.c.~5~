@@ -86,7 +86,7 @@ void interrupt()
                d=0;
                break;
             }
-         delay_ms(200);
+         delay(200);
       }
       }
    }

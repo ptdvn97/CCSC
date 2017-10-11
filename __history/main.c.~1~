@@ -4,7 +4,6 @@
 #define BUT_2   input(PIN_B5)
 #define BUT_3   input(PIN_B6)
 #define BUT_4   input(PIN_B7)
-int8 Q[]={01111110,10111101,11011011,11100111};
 int a=0,b=0,c=0,d=0;
 #INT_RB
 void interrupt()
@@ -60,10 +59,12 @@ void interrupt()
       {
       int8 i,m = 0b00000000;
             output_d(m);
-            if(BUT_1==0||BUT_2==0||BUT_3==0||BUT_4==0)
+            if(BUT_3==0||BUT_1==0||BUT_2==0||BUT_4==0)
             {
                c=0;
                break;
+               while(BUT_3==0||BUT_1==0||BUT_2==0||BUT_4==0)
+               {delay_ms(1);}
             }
             delay_ms(100);
             output_d(0xFF);
@@ -72,24 +73,13 @@ void interrupt()
    }
    if(BUT_4==0)
    {
+      if(d==0)
       d=1;
+      else d=0;
       while(BUT_4==0)
-         {delay_ms(1);}
-      while(d==1)
-      {
-      int i;
-      for(i=0;i<8;i++)
-      {
-         output_d(Q[i]);
-         if(BUT_1==0||BUT_2==0||BUT_3==0||BUT_4==0)
-            {
-               d=0;
-               break;
-            }
-         delay_ms(200);
-      }
-      }
+      {delay_ms(1);}
    }
+   
 }
 
 void main()
