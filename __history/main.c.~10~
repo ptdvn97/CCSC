@@ -24,8 +24,6 @@ void interrupt()
             {
                a=0;
                break;
-               while(BUT_1==0)
-         {delay_ms(1);}
             }
             delay_ms(100);
             m=m<<1;
@@ -47,8 +45,6 @@ void interrupt()
             {
                b=0;
                break;
-               while(BUT_2==0)
-         {delay_ms(1);}
             }
             delay_ms(100);
             m=m>>1;
@@ -68,8 +64,6 @@ void interrupt()
             {
                c=0;
                break;
-               while(BUT_3==0)
-         {delay_ms(1);}
             }
             delay_ms(100);
             output_d(0xFF);
@@ -78,22 +72,21 @@ void interrupt()
    }
    if(BUT_4==0)
 {
-      d=1;
-      while(BUT_4==0)
+      c=1;
+      while(BUT_3==0)
          {delay_ms(1);}
-      while(d==1)
+      while(c==1)
       {
-         int i;
-         for(i=0;i<4;i++)
-         {
-            output_d(Q[i]);
+      int8 i,m = 0b00000000;
+            output_d(m);
             if(BUT_1==0||BUT_2==0||BUT_3==0||BUT_4==0)
             {
-               d=0;
+               c=0;
                break;
             }
             delay_ms(100);
-         }
+            output_d(0xFF);
+            delay_ms(100);
       }
    }
 }

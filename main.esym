@@ -1,7 +1,8 @@
-D G "__PCM__" 0 103 ""5.025""
-D G "__DEVICE__" 0 103 "877"
-D G "__DATE__" 0 103 ""11-Oct-17""
-D G "__TIME__" 0 103 ""23:59:11"" "Standard Header file for the PIC16F877A device ////////////////"
+D G "BUT_4" 0 6 "input(PIN_B7)"
+D G "__PCM__" 0 108 ""5.025""
+D G "__DEVICE__" 0 108 "877"
+D G "__DATE__" 0 108 ""12-Oct-17""
+D G "__TIME__" 0 108 ""00:21:22"" "Standard Header file for the PIC16F877A device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 v L "value" 2 37 "int8" `54 
 f B "set_tris_a" 2 37 "void(int8 value)" `53 
@@ -788,12 +789,12 @@ V G "d" 0 8 "int8" `625
 F G "interrupt" 0 11 "void()" `626 
 V L "i" 0 19 "int8" `627 
 V L "m" 0 19 "int8" `628 
-V L "i" 0 40 "int8" `629 
-V L "m" 0 40 "int8" `630 
-V L "i" 0 61 "int8" `631 
-V L "m" 0 61 "int8" `632 
-V L "i" 0 80 "int8" `633 
-F G "MAIN" 0 96 "void()" `634 
+V L "i" 0 42 "int8" `629 
+V L "m" 0 42 "int8" `630 
+V L "i" 0 65 "int8" `631 
+V L "m" 0 65 "int8" `632 
+V L "i" 0 86 "int8" `633 
+F G "MAIN" 0 102 "void()" `634 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 0

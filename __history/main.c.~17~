@@ -83,8 +83,7 @@ void interrupt()
          {delay_ms(1);}
       while(d==1)
       {
-         int i;
-         for(i=0;i<4;i++)
+         for(i=0;i<4)
          {
             output_d(Q[i]);
             if(BUT_1==0||BUT_2==0||BUT_3==0||BUT_4==0)

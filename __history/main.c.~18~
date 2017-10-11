@@ -83,7 +83,6 @@ void interrupt()
          {delay_ms(1);}
       while(d==1)
       {
-         int i;
          for(i=0;i<4;i++)
          {
             output_d(Q[i]);

@@ -55,7 +55,7 @@ void interrupt()
          }
       }
    }
-   if(BUT_3==0)
+   if(BUT_4==0)
    {
       c=1;
       while(BUT_3==0)
@@ -68,32 +68,40 @@ void interrupt()
             {
                c=0;
                break;
-               while(BUT_3==0)
+               while(BUT_4==0)
          {delay_ms(1);}
             }
             delay_ms(100);
             output_d(0xFF);
+            if(BUT_1==0||BUT_2==0||BUT_3==0||BUT_4==0)
+            {
+               c=0;
+               break;
+               while(BUT_4==0)
+         {delay_ms(1);}
+            }
             delay_ms(100);
       }
    }
-   if(BUT_4==0)
+   if(BUT_3==0)
 {
       d=1;
       while(BUT_4==0)
          {delay_ms(1);}
       while(d==1)
       {
-         int i;
-         for(i=0;i<4;i++)
-         {
-            output_d(Q[i]);
+      int8 i,m = 0b0001000;
+            output_d(m);
             if(BUT_1==0||BUT_2==0||BUT_3==0||BUT_4==0)
             {
                d=0;
                break;
+               while(BUT_4==0)
+         {delay_ms(1);}
             }
             delay_ms(100);
-         }
+            output_d(0xFF);
+            delay_ms(100);
       }
    }
 }
