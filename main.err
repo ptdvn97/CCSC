@@ -1,0 +1,4 @@
+>>> Warning 202 "main.c" Line 60(12,13): Variable never used:   i
+      Memory usage:   ROM=4%      RAM=4% - 7%
+      0 Errors,  1 Warnings.
+Build Successful.
